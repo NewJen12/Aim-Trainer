@@ -2,11 +2,14 @@ import time
 import math
 import random
 import pygame
+
+
 pygame.init()
 items=['diamond', 'iron', 'gold', 'stick', 'apple', 'bread','bone',
        'emerald', 'leather', 'coal', 'arrow', 'ender_pearl']
 Width,Height = 800,600
 icons = {}
+
 for i in items:
     icon = pygame.image.load(f'icons/{i}.png')
     icon = pygame.transform.scale(icon, (40, 40))
@@ -16,11 +19,6 @@ pygame.font.init()
 font = pygame.font.SysFont('Arial', 24)
 Win = pygame.display.set_mode((Width,Height))
 
-
-
-
-
-    
 
 
 class Slots:
@@ -45,9 +43,6 @@ class Slots:
             return True
         return False
     
-
-
-
 
 
 def AimTrainer():
@@ -120,9 +115,7 @@ def AimTrainer():
             
 
         pygame.display.update()
-        
-        
-            
+                            
     pygame.quit()
 
 if __name__ == "__main__":
